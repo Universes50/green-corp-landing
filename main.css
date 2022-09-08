@@ -10,6 +10,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    position: sticky;
+    background-color:#fff;
+    top: 0;
+    z-index: 1;
   }
 
   .header__logo {
@@ -77,10 +81,25 @@
   .about__image {
     width: 500px;
   }
-   
+
+  @keyframes rotation {
+    0%{
+      transform: rotate(0deg);
+    }
+
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+ 
   .about__sun-image {
     width: 100px;
     height: 100px;
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-iteration-count: 2;
+    animation-timing-function: linear;
+    position: absolute;
   }
 
   .about__info {
@@ -89,6 +108,98 @@
 
   .form__containter {
     width: 550px;
+  }
+
+  .features {
+    background-color: #fff;
+    padding: 115px 60px 115px 60px;
+  }
+
+  .card {
+    padding: 35px 40px 25px 40px;
+    border: 1px solid #D9E4E6; 
+    border-radius: 5px;
+  }
+  
+  .card h3 {
+    font-size: 16px;
+    line-height: 22px;
+    opacity: 0.8;
+  }
+  
+  .card__logo {
+    width: 100px;
+    height: 100px;
+    font-size: 32px;
+    font-weight: 700;
+    background-color: #eaeff9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+  
+  #card__logo1 {
+    color: #ffb406;
+  }
+  
+  #card__logo2 {
+    color: #ad1714;
+  }
+  
+  #card__logo3 {
+    color: #22a030;
+  }
+  .cards {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-column-gap: 50px;
+  }
+
+  .features__feedback {
+    align-items: stretch;
+    }
+
+  .features__feedback-left {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    margin-right: 10px;
+  }
+
+  .osnova_features__feedback-left {
+    font-size: 48px;
+  }
+
+  .text_features__feedback-left {
+    display: flex;
+    align-items: left;
+    font-size: 18px;
+    line-height: 26px;
+    opacity: 0.7;
+  }
+
+  .features__feedback-right {
+    display: flex;
+    align-items: right;
+    justify-content: right;
+  }
+
+  .features__box {
+    padding: 30px 40px 25px 40px;
+    border: #D9E4E6;
+    border-radius: 5px;
+  }
+
+  .features__savings-box {
+    background-color: #dc5e26;
+    box-shadow: 6px;
+  }
+
+  .osnova_features__savings-box {
+    font-size: 48px;
+    margin-top: 0px;
+    margin-bottom: 20px;
   }
 
   .form {
@@ -189,4 +300,132 @@
 
 .footer__links a {
     padding-bottom: 15px;
+}
+
+@media (max-width: 720px) {
+  .features {
+      padding: 50px 10px;
+  }
+
+  .cards {
+      grid-template-columns: auto;
+  }
+
+  .features__feedback {
+      flex-direction: column;
+  }
+
+  .features__feedback-left {
+      margin-right: 0;
+  }
+
+  .features__feedback-left h2, .features__box h3 {
+      font-size: 36px;
+  }
+
+  .features__feedback-right {
+      flex-direction: column;
+      align-items: initial;
+  }
+
+  .features__savings-box {
+      margin-right: 0;
+      margin-bottom: 30px;
+  }
+  .promo {
+      flex-direction: column-reverse;
+  }
+
+  .promo__right {
+      padding: 50px 10px;
+  }
+
+  .promo__image {
+      width: 100%;
+      height: 500px;
+  }
+}
+
+/* Планшеты */
+@media (max-width: 1024px) {
+  .about {
+      padding: 115px 20px;
+  }
+
+  .about h1 {
+      font-size: 36px;
+      line-height: 40px;
+  }
+
+  .about__image {
+      width: 280px;
+  }
+
+  .about__sun-image {
+      width: 75px;
+      height: 75px;
+  }
+}
+
+/* Мобильные устройства */
+@media (max-width: 720px) {
+  header {
+      padding: 10px;
+  }
+
+  .header__logo {
+      height: 20px;
+  }
+
+  header a {
+      margin-right: 10px;
+  }
+
+  .about {
+      flex-direction: column-reverse;
+      padding: 50px 10px;
+  }
+
+  .about h1 {
+      font-size: 36px;
+      line-height: 40px;
+  }
+
+  .about__image {
+      width: 280px;
+  }
+
+  .about__sun-image {
+      width: 75px;
+      height: 75px;
+  }
+
+  .features {
+    padding: 50px 10px 50px 10px;
+  }
+
+  .features__feedback-left {
+    font-size: 36px;
+    margin-right: 10px;
+  }
+
+  .osnova_features__savings-box {
+    font-size: 36px;
+  }
+
+  .form {
+      padding: 50px 10px;
+  }
+
+  .form h1 {
+      font-size: 36px;
+  }
+
+  footer {
+      padding: 50px 10px;
+  }
+
+  .footer__container {
+      flex-direction: column;
+  }
 }
