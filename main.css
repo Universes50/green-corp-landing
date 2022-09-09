@@ -157,13 +157,14 @@
   }
 
   .features__feedback {
-    align-items: stretch;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    grid-column-gap: 50px;
+    padding: 30px 40px 25px 40px;
     }
 
   .features__feedback-left {
-    display: flex;
-    align-items: left;
-    justify-content: left;
     margin-right: 10px;
   }
 
@@ -172,34 +173,104 @@
   }
 
   .text_features__feedback-left {
-    display: flex;
-    align-items: left;
     font-size: 18px;
     line-height: 26px;
     opacity: 0.7;
   }
 
   .features__feedback-right {
+    grid-column-gap: 35px;
     display: flex;
-    align-items: right;
-    justify-content: right;
-  }
-
-  .features__box {
+    justify-content: center;
+    align-items: inherit;
     padding: 30px 40px 25px 40px;
     border: #D9E4E6;
     border-radius: 5px;
+    text-align: left;
   }
 
   .features__savings-box {
+    padding: 30px 40px 25px 40px;
+    text-align: left;
+    color: #fff;
     background-color: #dc5e26;
-    box-shadow: 6px;
+    box-shadow: 0px 6px rgb(221 95 38 / 20%);
+    border-radius: 20px;
+    vertical-align: middle;
   }
 
   .osnova_features__savings-box {
     font-size: 48px;
     margin-top: 0px;
     margin-bottom: 20px;
+  }
+
+  .text_features__savings-box {
+    font-size: 18px;
+  }
+
+  .features__rate-box {
+    padding: 30px 40px 25px 40px;
+    text-align: left;
+    color: #fff;
+    background-color: #1d263a;
+    box-shadow: 0px 6px rgb(29 38 58 / 20%);
+    border-radius: 20px;
+    vertical-align: middle;
+  }
+
+  .osnova_features__rate-box {
+    font-size: 48px;
+  }
+
+  .text_features__rate-box {
+    font-size: 18px;
+  }
+  .stars {
+    color: #ff7039;
+  }
+
+  .promo {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #dd5f26;
+  }
+
+  .promo__image {
+    display: flex;
+    background-image: url(img/promo.jpg);
+    text-align: center;
+    width: 50%;
+    flex-shrink: 0;
+  }
+
+  .promo__right {
+    padding: 160px 60px 160px 60px;
+  }
+
+  .text_promo__right {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 500;
+    border-radius: 25px;
+    background-color: #fff;
+    padding: 30px 40px 30px 40px;
+  }
+
+  .text_promo__right button {
+    display: block;
+    font-size: 18px;
+    background-color: #107b1c;
+    padding: 15px 30px 15px 30px;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+
+  li::marker {
+    color: #ec6b29;
+    padding-right: 10px;
   }
 
   .form {
