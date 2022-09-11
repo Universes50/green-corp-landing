@@ -150,127 +150,132 @@
   #card__logo3 {
     color: #22a030;
   }
+
   .cards {
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr; 
     grid-column-gap: 50px;
   }
 
+  .features__border {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #E6EAF4;
+  }
+
   .features__feedback {
     display: flex;
-    flex-wrap: nowrap;
     align-items: center;
-    grid-column-gap: 50px;
-    padding: 30px 40px 25px 40px;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
     }
 
   .features__feedback-left {
-    margin-right: 10px;
+    margin-right: 40px;
   }
 
-  .osnova_features__feedback-left {
+  .features__feedback-left h2 {
     font-size: 48px;
   }
 
-  .text_features__feedback-left {
+  .features__feedback-left p {
     font-size: 18px;
     line-height: 26px;
     opacity: 0.7;
   }
 
-  .features__feedback-right {
-    grid-column-gap: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: inherit;
+  .features__box {
     padding: 30px 40px 25px 40px;
-    border: #D9E4E6;
-    border-radius: 5px;
-    text-align: left;
+    color: white;
+    border-radius: 25px;
   }
 
-  .features__savings-box {
-    padding: 30px 40px 25px 40px;
-    text-align: left;
-    color: #fff;
-    background-color: #dc5e26;
-    box-shadow: 0px 6px rgb(221 95 38 / 20%);
-    border-radius: 20px;
-    vertical-align: middle;
-  }
-
-  .osnova_features__savings-box {
+  .features__feedback-right h3 {
     font-size: 48px;
     margin-top: 0px;
     margin-bottom: 20px;
   }
 
-  .text_features__savings-box {
-    font-size: 18px;
+  .features__feedback-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .features__savings-box {
+    background-color: #dc5e26;
+    box-shadow: 0px 6px rgb(221 95 38 / 20%);
+    margin-right: 30px;
   }
 
   .features__rate-box {
-    padding: 30px 40px 25px 40px;
-    text-align: left;
-    color: #fff;
     background-color: #1d263a;
     box-shadow: 0px 6px rgb(29 38 58 / 20%);
-    border-radius: 20px;
-    vertical-align: middle;
   }
 
-  .osnova_features__rate-box {
-    font-size: 48px;
-  }
-
-  .text_features__rate-box {
-    font-size: 18px;
-  }
   .stars {
     color: #ff7039;
   }
 
   .promo {
     display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #dd5f26;
   }
-
+  
   .promo__image {
-    display: flex;
     background-image: url(img/promo.jpg);
-    text-align: center;
     width: 50%;
     flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
   }
-
+  
   .promo__right {
-    padding: 160px 60px 160px 60px;
+    background: #dd5f26;
+    padding: 160px 60px;
   }
 
-  .text_promo__right {
-    font-size: 20px;
-    line-height: 22px;
-    font-weight: 500;
+  .promo__text {
+    background-color: white;
+    padding: 30px 40px;
     border-radius: 25px;
-    background-color: #fff;
-    padding: 30px 40px 30px 40px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
   }
-
-  .text_promo__right button {
-    display: block;
-    font-size: 18px;
+  
+  .promo__text p::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ec6b29;
+    margin-right: 10px;
+  }
+  
+  .promo__text p {
+    opacity: 0.8;
+  }
+  
+  .promo__text button {
     background-color: #107b1c;
-    padding: 15px 30px 15px 30px;
-    font-weight: 600;
     margin-top: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    box-shadow: 0 16px 36px rgb(16 122 28 / 30%);
+    padding: 15px 30px;
   }
-
-  li::marker {
-    color: #ec6b29;
-    padding-right: 10px;
+  
+  .promo__button-wrap {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .promo__text button i {
+    font-size: 15px;
+    margin-left: 5px;
   }
 
   .form {
@@ -476,11 +481,14 @@
   }
 
   .features__feedback-left {
-    font-size: 36px;
     margin-right: 10px;
   }
 
-  .osnova_features__savings-box {
+  .features__feedback-left h2 {
+    font-size: 36px;
+  }
+
+  .features__feedback-right h3 {
     font-size: 36px;
   }
 
